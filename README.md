@@ -219,29 +219,31 @@ This repository contains a template project with all files at the root level:
 
 ```
 .
-├── .cursor/                 # Cursor IDE specific settings
-│   └── swiftrules.md        # Project coding rules
-├── .swiftlint.yml           # SwiftLint configuration
-├── .env.example             # Environment variables template
-├── Sources/                 # Application source code
-│   ├── App.swift            # SwiftUI App entry point
-│   ├── Configuration/       # Environment configuration
-│   │   └── Configuration.swift
-│   ├── Info.plist           # App info property list
-│   └── Modules/             # VIPER modules
-│       └── Home/            # Home module
-│           ├── View/        # SwiftUI views
-│           ├── Interactor/  # Business logic
-│           ├── Presenter/   # Presentation logic
-│           ├── Entity/      # Data models (HomeEntity.swift)
-│           └── Router/      # Navigation logic
-├── Tests/                   # Test source code
-│   ├── Info.plist           # Test info property list
-│   └── SwiftUIViperAppTests.swift
-├── .gitignore               # Git ignore file
-├── generate-project.sh      # Script for generating project file
-├── project.yml.template     # XcodeGen configuration template
-└── README.md                # Project documentation
+├── .cursor/                          # Cursor IDE specific settings
+│   └── rules/                        # Project coding rules
+│       ├── swift-cursor-rules.mdc    # Guidelines for project-wide rule authoring
+│       └── swiftrules.mdc            # General Swift project conventions
+├── .swiftlint.yml                    # SwiftLint configuration
+├── .env.example                      # Environment variables template
+├── Sources/                          # Application source code
+│   ├── App.swift                     # SwiftUI App entry point
+│   ├── Configuration/                # Environment configuration
+│   │   └── Configuration.swift       # Centralized environment variable handler
+│   ├── Info.plist                    # App info property list
+│   └── Modules/                      # VIPER modules
+│       └── Home/                     # Home module
+│           ├── View/                 # SwiftUI views
+│           ├── Interactor/           # Business logic
+│           ├── Presenter/            # Presentation logic
+│           ├── Entity/               # Data models (HomeEntity.swift)
+│           └── Router/               # Navigation logic
+├── Tests/                            # Test source code
+│   ├── Info.plist                    # Test info property list
+│   └── SwiftUIViperAppTests.swift    # Unit tests for Interactor and Presenter logic using XCTest
+├── .gitignore                        # Git ignore file
+├── generate-project.sh               # Script for generating project file
+├── project.yml.template              # XcodeGen configuration template
+└── README.md                         # Project documentation
 ```
 
 ## VIPER Module Structure
@@ -365,6 +367,20 @@ BUNDLE_ID_PREFIX=com.yourcompany
 APP_GROUP_ID=group.com.yourcompany.yourawesomeapp
 TEAM_ID=ABCDEF1234
 ```
+
+## 👀 What It Looks Like
+
+After completing setup and running the app, you should see a screen like this:
+
+<img src="https://github.com/user-attachments/assets/77988819-5809-4b7d-98b5-396fd02149fc" alt="Simulator Screenshot" width="20%" />
+
+This shows:
+- A **Home** title from the default module
+- A welcome message and confirmation of **hot reloading** status
+- A **Load Items** button wired to the Presenter and Interactor
+- A list of example topics (`Swift`, `UIKit`, etc.) fetched via VIPER flow
+
+You can customize this screen by modifying the Home module or adding new VIPER modules.
 
 ## Contributing
 
