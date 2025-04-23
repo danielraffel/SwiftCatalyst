@@ -1,0 +1,35 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    120
+  ],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.defaultFormatter": "vknabel.vscode-apple-swift-format",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    ".build": true,
+    "**/*.xcodeproj": true,
+    "**/*.xcworkspace": true,
+    "**/xcuserdata": true,
+    "**/xcshareddata": true,
+    "**/*.xcscmblueprint": true,
+    "**/*.xccheckout": true
+  },
+  "apple-swift-format.configSearchPaths": [
+    ".swift-format",
+    ".swift-format.json"
+  ],
+  "[swift]": {
+    "editor.defaultFormatter": "vknabel.vscode-apple-swift-format"
+  },
+  "swiftlint.enable": true,
+  "swiftlint.autoLintOnSave": true,
+  "terminal.integrated.env.osx": {
+    "PATH": "/usr/local/bin:${env:PATH}"
+  }
+}

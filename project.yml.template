@@ -1,0 +1,76 @@
+name: ${APP_NAME}
+options:
+  createIntermediateGroups: true
+  bundleIdPrefix: ${BUNDLE_ID_PREFIX}
+  deploymentTarget:
+    iOS: 18.0
+  indentWidth: 2
+  tabWidth: 2
+  usesTabs: false
+
+packages:
+  Inject:
+    url: https://github.com/krzysztofzablocki/Inject.git
+    from: 1.5.0
+
+targets:
+  ${APP_NAME}:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+    dependencies:
+      - package: Inject
+    settings:
+      base:
+        INFOPLIST_FILE: Sources/Info.plist
+        SWIFT_ACTIVE_COMPILATION_CONDITIONS: DEBUG
+        ENABLE_TESTABILITY: YES
+        PRODUCT_BUNDLE_IDENTIFIER: ${BUNDLE_ID_PREFIX}.${APP_NAME}
+        DEVELOPMENT_TEAM: ${TEAM_ID}
+      configs:
+        debug:
+          OTHER_LDFLAGS:
+            - "-Xlinker"
+            - "-interposable"
+    preBuildScripts:
+      - name: SwiftLint
+        script: |
+          if which swiftlint > /dev/null; then
+            swiftlint
+          else
+            echo "warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint"
+          fi
+        basedOnDependencyAnalysis: false
+        
+  ${APP_NAME}Tests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: ${APP_NAME}
+    settings:
+      base:
+        INFOPLIST_FILE: Tests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: ${BUNDLE_ID_PREFIX}.${APP_NAME}Tests
+        
+schemes:
+  ${APP_NAME}:
+    build:
+      targets:
+        ${APP_NAME}: all
+    run:
+      config: Debug
+      commandLineArguments:
+        "-FIRDebugEnabled": true
+    test:
+      config: Debug
+      targets:
+        - ${APP_NAME}Tests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

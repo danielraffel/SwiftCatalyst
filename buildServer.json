@@ -1,0 +1,10 @@
+{
+  "name": "Apple Swift Package Manager",
+  "directory": "${workspaceFolder}",
+  "disableScanBuildProducts": true,
+  "disableSendInactiveMessages": true,
+  "compilerInfoBinary": "swiftc",
+  "env": {
+    "SDKROOT": "macosx"
+  }
+}
