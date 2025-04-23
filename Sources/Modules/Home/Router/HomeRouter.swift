@@ -1,7 +1,7 @@
 import SwiftUI
 
 protocol HomeRouterProtocol {
-  func makeDetailView(for item: HomeItem) -> some View
+  func makeDetailView(for item: HomeItem) -> AnyView
 }
 
 final class HomeRouter: HomeRouterProtocol {
@@ -11,10 +11,12 @@ final class HomeRouter: HomeRouterProtocol {
     let presenter = HomePresenter(interactor: interactor, router: router)
     return HomeView(presenter: presenter)
   }
-  
-  func makeDetailView(for item: HomeItem) -> some View {
-    Text("Detail view for \(item.name)")
-      .font(.title)
-      .navigationTitle(item.name)
+
+  func makeDetailView(for item: HomeItem) -> AnyView {
+    AnyView(
+      Text("Detail view for \(item.name)")
+        .font(.title)
+        .navigationTitle(item.name)
+    )
   }
 }
