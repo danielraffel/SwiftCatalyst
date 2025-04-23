@@ -331,9 +331,7 @@ Then add this group in Xcode under:
 #### `TEAM_ID`
 
 Your 10-character Apple Team ID. Find it at:
-- [Apple Developer](https://developer.apple.com/account/)
-- Left sidebar > **Membership**
-- Under **Team Information**
+- [Apple Developer](https://developer.apple.com/account#MembershipDetailsCard)
 
 #### `.env` Example
 
