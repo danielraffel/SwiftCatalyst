@@ -53,18 +53,18 @@ This is the recommended approach for:
 
 Setup steps:
 
-1. **Clone the Repository**
+### 1. **Clone the Repository**
 
 ```bash
 git clone https://github.com/danielraffel/SwiftUI-VIPER-HotReload.git
 cd SwiftUI-VIPER-HotReload
 ```
 
-2. **Open in Cursor IDE**
+### 2. **Open in Cursor IDE**
 
 Open the project folder in Cursor IDE.
 
-3. **Create Environment File**
+### 3. **Create Environment File**
 
 Create a `.env` file based on the provided `.env.example` template:
 
@@ -78,7 +78,7 @@ TEAM_ID=ABCDEF1234
 
 [See FAQ below](#faq) if unsure about any of the values in this step.
 
-4. **Generate Project File**
+### 4. **Generate Project File**
 
 Run the included script to generate your project.yml from the template:
 
@@ -92,17 +92,39 @@ This will:
 - Run XcodeGen to create the Xcode project
 - Inform you of the process with detailed logs
 
-5. **Configure Build Server (Only if using Sweetpad)**
+### 5. **Optional: Configure Build Server (Only for Sweetpad Builds)**
 
-If you want to build directly within Cursor IDE:
+> **👋 New to this? Here's the quick takeaway:**  
+> If you're happy coding in **Cursor** and building/running your app in **Xcode**, you can **skip this step**.  
+>  
+> But if you'd rather stay entirely inside Cursor — *code, build, and run all in one place* — then keep reading.
 
-1. Press `Cmd+Shift+P` to open the command palette
-2. Type "Sweetpad: Generate Build Server Config" and select it
+To build and run your app **directly within the Cursor IDE using Sweetpad**, you’ll need to set up a build server configuration:
+
+1. Press `Cmd+Shift+P` to open the command palette  
+2. Type **“Sweetpad: Generate Build Server Config”** and select it  
 3. This will create a `buildServer.json` file in your project root
 
-> **Note:** This step is only required if you want to build within Cursor IDE using Sweetpad. If you're building in Xcode, you can skip this step.
+#### 🧰 You'll Also Need: `xcode-build-server`
 
-6. **Build and Run**
+If you go this route, you’ll need [`xcode-build-server`](https://github.com/ChimeHQ/xcode-build-server), a tool that connects Cursor’s Sweetpad with Xcode’s build system using the Build Server Protocol.
+
+To install it:
+
+```bash
+brew install chimehq/tap/xcode-build-server
+```
+
+#### 💡 Why do this?
+
+- Lets you **build and run your app inside Cursor** without opening Xcode
+- Supports a smoother, keyboard-driven, IDE-native workflow
+- Ideal if you want a *lightweight, all-in-one dev environment*
+
+> **Again, this step is 100% optional.**  
+> You can always build using Xcode and just use Cursor for editing if that’s more comfortable.
+
+### 6. **Build and Run**
 
 Either:
 - Open the generated .xcodeproj file in Xcode and run
@@ -117,18 +139,18 @@ This approach is useful for:
 
 Be aware that this approach uses default values for project name, bundle IDs, etc., and doesn't fully utilize the configuration system.
 
-1. **Clone the Repository**
+#### 1. **Clone the Repository**
 
 ```bash
 git clone https://github.com/danielraffel/SwiftUI-VIPER-HotReload.git
 cd SwiftUI-VIPER-HotReload
 ```
 
-2. **Open in Cursor IDE**
+####2. **Open in Cursor IDE**
 
 Open the project folder in Cursor IDE.
 
-3. **Create Project File and Generate Xcode Project**
+#### 3. **Create Project File and Generate Xcode Project**
 
 Since this template uses a template-based project configuration, you need to create a project.yml file first:
 
@@ -143,7 +165,7 @@ This will:
 
 > **Note:** This approach uses default values and doesn't fully utilize the environment configuration system. For a more customized setup, use the Environment Configuration approach.
 
-4. **Build and Run**
+#### 4. **Build and Run**
 
 Open the generated .xcodeproj file in Xcode and run.
 
