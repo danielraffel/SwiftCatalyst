@@ -305,7 +305,7 @@ Here’s where to find each of them in your [Apple Developer account](https://de
 
 #### `APP_NAME`
 
-This is your app's display name—define it yourself in:
+This is your app's display name—**define it yourself** in:
 - **Xcode**: Target settings > General > Display Name
 - **App Store Connect**: "My Apps" > Select app
 
@@ -321,7 +321,7 @@ You define it when you create the app's App ID in:
 Used for sharing data between app targets. Looks like: `group.com.yourcompany.yourawesomeapp`.
 
 To create:
-1. Go to [Identifiers](https://developer.apple.com/account/resources/identifiers/list)
+1. Go to [Identifiers](https://developer.apple.com/account/resources/identifiers/list/applicationGroup)
 2. Select your app or create one
 3. Enable **App Groups** and register a new one
 
