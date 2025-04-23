@@ -14,6 +14,7 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [Creating a New VIPER Module](#creating-a-new-viper-module)
 - [Customizing the Project](#customizing-the-project)
 - [Acknowledgments](#acknowledgments)
+- [FAQ](#faq)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -74,6 +75,8 @@ BUNDLE_ID_PREFIX=com.yourcompany
 APP_GROUP_ID=group.com.yourcompany.yourawesomeapp
 TEAM_ID=ABCDEF1234
 ```
+
+[See FAQ below](#faq) if unsure about any of the values in this step.
 
 4. **Generate Project File**
 
@@ -291,6 +294,57 @@ For an Xcode-like experience, add these to your Cursor keybindings.json:
 - [Inject](https://github.com/krzysztofzablocki/Inject) - Hot reloading support
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) - Project generation
 - [Sweetpad](https://sweetpad.hyzyla.dev) - Cursor IDE integration
+
+## FAQ
+
+### 📌 Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?
+
+When setting up your `.env` file for the project, you’ll need to supply values like `APP_NAME`, `BUNDLE_ID_PREFIX`, `APP_GROUP_ID`, and `TEAM_ID`.
+
+Here’s where to find each of them in your [Apple Developer account](https://developer.apple.com/account/):
+
+#### `APP_NAME`
+
+This is your app's display name—define it yourself in:
+- **Xcode**: Target settings > General > Display Name
+- **App Store Connect**: "My Apps" > Select app
+
+#### `BUNDLE_ID_PREFIX`
+
+Typically in the form `com.yourcompany`, this is the custom portion of your app’s bundle identifier.
+
+You define it when you create the app's App ID in:
+- [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list) > Identifiers
+
+#### `APP_GROUP_ID`
+
+Used for sharing data between app targets. Looks like: `group.com.yourcompany.yourawesomeapp`.
+
+To create:
+1. Go to [Identifiers](https://developer.apple.com/account/resources/identifiers/list)
+2. Select your app or create one
+3. Enable **App Groups** and register a new one
+
+Then add this group in Xcode under:
+- **Signing & Capabilities** > App Groups
+
+#### `TEAM_ID`
+
+Your 10-character Apple Team ID. Find it at:
+- [Apple Developer](https://developer.apple.com/account/)
+- Left sidebar > **Membership**
+- Under **Team Information**
+
+#### `.env` Example
+
+These values are then placed in your `.env` file like so:
+
+```env
+APP_NAME=YourAwesomeApp
+BUNDLE_ID_PREFIX=com.yourcompany
+APP_GROUP_ID=group.com.yourcompany.yourawesomeapp
+TEAM_ID=ABCDEF1234
+```
 
 ## Contributing
 
