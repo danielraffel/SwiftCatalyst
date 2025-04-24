@@ -1,14 +1,35 @@
 ---
-description: Swift VIPER Architecture Guidelines
-globs: "*.swift"
-alwaysApply: false
+title: Swift VIPER Architecture Guidelines
+description: Guidelines for implementing the VIPER architecture pattern in SwiftUI applications with hot reloading support
+glob: "Sources/Modules/**/*.swift"
+alwaysApply: true
 ---
+
+@file ../Sources/Configuration/Configuration.swift
+@file ../Sources/Modules/Home/View/HomeView.swift
+
+# Swift VIPER Architecture Guidelines
 
 ## General Guidelines
 1. Use the latest SwiftUI APIs and features whenever possible.
 2. Implement `async/await` for asynchronous operations.
 3. Write clean, readable, and well-structured code.
 4. Follow the VIPER architecture to ensure modularity and scalability.
+
+## Project Structure
+All code should follow the established project structure:
+- Base directory: SwiftCatalyst
+- Main code in: Sources
+- VIPER modules in: Sources/Modules/[ModuleName]/[ComponentType]/[ModuleName][ComponentType].swift
+
+## File Naming Convention
+- Module components should be named with the pattern [ModuleName][ComponentType].swift
+- For example:
+  - HomeView.swift
+  - HomePresenter.swift
+  - HomeInteractor.swift
+  - HomeEntity.swift
+  - HomeRouter.swift
 
 ## Project Configuration
 
@@ -201,6 +222,3 @@ struct ExampleView: View {
 1. Generate Build Server Config using Sweetpad extension.
 2. Use Sweetpad for building and debugging.
 3. Ensure project.yml is properly configured for hot reloading.
-
-@Configuration.swift
-@ExampleVIPERModule.swift
