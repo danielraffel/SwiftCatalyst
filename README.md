@@ -1,4 +1,4 @@
-# SwiftUI-VIPER-HotReload
+# SwiftCatalyst
 
 This project is a modern SwiftUI iOS template designed to make it easy to start building a project quickly using an AI coding tool like Cursor. It follows the VIPER architecture to keep your code modular and scalable. The template includes built-in support for hot reloading in Cursor so you can see changes in the simulator as you work. It also comes with a set of custom Swift coding rules that guide style and best practices, including a meta-rule that helps you create new Cursor rules. The project is pre-configured to work with Sweetpad for state previews, XcodeGen for project generation, SwiftLint for code quality enforcement, and InjectionIII for runtime code injection. This setup aims to make it easier to stay consistent, iterate quickly, and extend your codebase with AI assistance.
 
@@ -64,8 +64,8 @@ Setup steps:
 ### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/danielraffel/SwiftUI-VIPER-HotReload.git
-cd SwiftUI-VIPER-HotReload
+git clone https://github.com/danielraffel/SwiftCatalyst.git
+cd SwiftCatalyst
 ```
 
 ### 2. **Open in Cursor IDE**
@@ -165,8 +165,8 @@ Be aware that this approach uses default values for project name, bundle IDs, et
 #### 1. **Clone the Repository**
 
 ```bash
-git clone https://github.com/danielraffel/SwiftUI-VIPER-HotReload.git
-cd SwiftUI-VIPER-HotReload
+git clone https://github.com/danielraffel/SwiftCatalyst.git
+cd SwiftCatalyst
 ```
 
 #### 2. **Open in Cursor IDE**
