@@ -42,7 +42,7 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 - [Sweetpad extension for Cursor](https://sweetpad.hyzyla.dev)
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`)
 - [SwiftLint](https://github.com/realm/SwiftLint) (`brew install swiftlint`)
-- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest) (download and install the InjectionIII.app.zip file)
+- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest)
 
 ---
 
