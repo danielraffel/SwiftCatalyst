@@ -1,6 +1,6 @@
 # SwiftUI-VIPER-HotReload
 
-A modern SwiftUI iOS project template using VIPER architecture with hot reloading support in Cursor IDE.
+A modern SwiftUI iOS project template using VIPER architecture with hot reloading support in Cursor IDE. It also includes a set of custom Swift coding rules tailored for use with Cursor, ensuring consistent style and best practices across your team.
 
 ## Table of Contents
 - [Features](#features)
@@ -8,7 +8,7 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [Setup Process](#setup-process)
   - [Environment Configuration (Recommended)](#environment-configuration-recommended)
   - [Basic Setup (Quick Start)](#basic-setup-quick-start)
-- [Hot Reloading with InjectIII](#hot-reloading-with-injectiii)
+- [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
 - [Project Structure](#project-structure)
 - [VIPER Module Structure](#viper-module-structure)
 - [Creating a New VIPER Module](#creating-a-new-viper-module)
@@ -35,6 +35,7 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [Sweetpad extension for Cursor](https://sweetpad.hyzyla.dev)
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`)
 - [SwiftLint](https://github.com/realm/SwiftLint) (optional, `brew install swiftlint`)
+- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest) (download and install the InjectionIII.app.zip file)
 
 ## Setup Process
 
@@ -99,15 +100,15 @@ This will:
 >  
 > But if you'd rather stay entirely inside Cursor — *code, build, and run all in one place* — then keep reading.
 
-To build and run your app **directly within the Cursor IDE using Sweetpad**, you’ll need to set up a build server configuration:
+To build and run your app **directly within the Cursor IDE using Sweetpad**, you'll need to set up a build server configuration:
 
 1. Press `Cmd+Shift+P` to open the command palette  
-2. Type **“Sweetpad: Generate Build Server Config”** and select it  
+2. Type **"Sweetpad: Generate Build Server Config"** and select it  
 3. This will create a `buildServer.json` file in your project root
 
 #### 🧰 You'll Also Need: `xcode-build-server`
 
-If you go this route, you’ll need [`xcode-build-server`](https://github.com/ChimeHQ/xcode-build-server), a tool that connects Cursor’s Sweetpad with Xcode’s build system using the Build Server Protocol.
+If you go this route, you'll need [`xcode-build-server`](https://github.com/ChimeHQ/xcode-build-server), a tool that connects Cursor's Sweetpad with Xcode's build system using the Build Server Protocol.
 
 To install it:
 
@@ -122,15 +123,28 @@ brew install chimehq/tap/xcode-build-server
 - Ideal if you want a *lightweight, all-in-one dev environment*
 
 > **Again, this step is 100% optional.**  
-> You can always build using Xcode and just use Cursor for editing if that’s more comfortable.
+> You can always build using Xcode and just use Cursor for editing if that's more comfortable.
 
-### 6. **Build and Run**
+### 6. **Install InjectionIII for Hot Reloading**
 
-Either:
-- Open the generated .xcodeproj file in Xcode and run
-- Or if using Sweetpad: use the Sweetpad sidebar to select your target and simulator
+1. **Download InjectionIII**:
+   - Get the latest version from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest)
+   - Download the `InjectionIII.app.zip` file
 
-### Basic Setup (Quick Start)
+2. **Install the App**:
+   - Unzip the downloaded file
+   - Move `InjectionIII.app` to your Applications folder
+   - Open the app (right-click and select "Open" if you encounter security warnings)
+
+3. **Start InjectionIII** before running your project for hot reloading to work
+
+### 7. **Build and Run**
+
+You have two options:
+	•	Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
+	•	Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
+
+### Basic Setup (Quick Start - Do Not Recommend)
 
 This approach is useful for:
 - Quick evaluation of the template
@@ -146,7 +160,7 @@ git clone https://github.com/danielraffel/SwiftUI-VIPER-HotReload.git
 cd SwiftUI-VIPER-HotReload
 ```
 
-####2. **Open in Cursor IDE**
+#### 2. **Open in Cursor IDE**
 
 Open the project folder in Cursor IDE.
 
@@ -165,7 +179,11 @@ This will:
 
 > **Note:** This approach uses default values and doesn't fully utilize the environment configuration system. For a more customized setup, use the Environment Configuration approach.
 
-#### 4. **Build and Run**
+#### 4. **Install InjectionIII**
+
+Download and install InjectionIII as described in step 6 of the Environment Configuration section above.
+
+#### 5. **Build and Run**
 
 Open the generated .xcodeproj file in Xcode and run.
 
@@ -181,15 +199,23 @@ let apiUrl = Configuration.apiBaseURL
 
 You don't need to manually import the Configuration file in each of your files - it's available throughout the project.
 
-## Hot Reloading with InjectIII
+## Hot Reloading with InjectionIII
 
 Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version 1.5.0).
 
-To use hot reloading:
+### Setting Up Hot Reloading
 
-1. Ensure your app is running in the simulator
-2. Make changes to any SwiftUI view
-3. Save the file
+1. Install InjectionIII from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest) (download InjectionIII.app.zip)
+2. Move InjectionIII.app to your Applications folder
+3. Start InjectionIII before running your project
+
+### Using Hot Reloading
+
+To apply changes while the app is running in the simulator:
+
+1. Make changes to any SwiftUI view
+2. Save the file
+3. Press **Control + =** to trigger the hot reload
 4. The changes will be immediately reflected in the simulator
 
 Each SwiftUI view should:
@@ -287,45 +313,36 @@ Regardless of approach, consider:
 - Renaming the root module from `Home` to something more descriptive for your application
 - Updating module names to match your application's domain
 
-## Optional Sweetpad Integration
+## Custom Keyboard Shortcuts in Cursor for Sweetpad
 
-Sweetpad allows you to build and run directly from Cursor IDE:
+![Cursor Keyboard Shortcuts](https://example.com/keyboard-shortcuts-screenshot.png)
 
-1. **Configure Keyboard Shortcuts**
+For an efficient development workflow in Cursor, configure these keyboard shortcuts to work better with Sweetpad:
 
-For an Xcode-like experience, add these to your Cursor keybindings.json:
+1. **Open Cursor Settings**:
+   - Press `Cmd+,` (Command + Comma)
+   - Select "Keyboard Shortcuts"
 
-```json
-[
-  {
-    "key": "cmd+b",
-    "command": "sweetpad.build.build"
-  },
-  {
-    "key": "ctrl+cmd+r",
-    "command": "sweetpad.build.launch"
-  }
-]
-```
-
-2. **Using Sweetpad to Build and Run**
-
-- Use the Sweetpad sidebar to select your target and simulator
-- Click the "Run" button or use your configured keyboard shortcuts
+2. **Add these shortcuts**:
+- `Cmd+Shift+B` → Build & run
+- `Cmd+Shift+K` → Clean build
+  
+![Cursor Sweetpad Shortcuts](https://github.com/user-attachments/assets/b1ac9c74-217e-4dae-9584-8f5128378cc4)
 
 ## Acknowledgments
 
 - [Inject](https://github.com/krzysztofzablocki/Inject) - Hot reloading support
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) - Project generation
 - [Sweetpad](https://sweetpad.hyzyla.dev) - Cursor IDE integration
+- [InjectionIII](https://github.com/johnno1962/InjectionIII) - Runtime code injection
 
 ## FAQ
 
 ### 📌 Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?
 
-When setting up your `.env` file for the project, you’ll need to supply values like `APP_NAME`, `BUNDLE_ID_PREFIX`, `APP_GROUP_ID`, and `TEAM_ID`.
+When setting up your `.env` file for the project, you'll need to supply values like `APP_NAME`, `BUNDLE_ID_PREFIX`, `APP_GROUP_ID`, and `TEAM_ID`.
 
-Here’s where to find each of them in your [Apple Developer account](https://developer.apple.com/account/):
+Here's where to find each of them in your [Apple Developer account](https://developer.apple.com/account/):
 
 #### `APP_NAME`
 
@@ -335,7 +352,7 @@ This is your app's display name—**define it yourself** in:
 
 #### `BUNDLE_ID_PREFIX`
 
-Typically in the form `com.yourcompany`, this is the custom portion of your app’s bundle identifier.
+Typically in the form `com.yourcompany`, this is the custom portion of your app's bundle identifier.
 
 You define it when you create the app's App ID in:
 - [Certificates, Identifiers & Profiles](https://developer.apple.com/account/resources/identifiers/list) > Identifiers
