@@ -12,11 +12,11 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 - [Setup Process](#setup-process)
   - [Environment Configuration (Recommended)](#environment-configuration-recommended)
   - [Basic Setup (Quick Start - Do Not Recommend)](#basic-setup-quick-start---do-not-recommend)
-- [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
+  - [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
 - [Project Structure](#project-structure)
-- [VIPER Module Structure](#viper-module-structure)
-- [Creating a New VIPER Module](#creating-a-new-viper-module)
-- [Customizing the Project](#customizing-the-project)
+  - [VIPER Module Structure](#viper-module-structure)
+  - [Creating a New VIPER Module](#creating-a-new-viper-module)
+  - [Customizing the Project](#customizing-the-project)
 - [Acknowledgments](#acknowledgments)
 - [FAQ](#faq)
   - [Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?](#-where-can-i-find-my-team_id-app_group_id-and-other-apple-developer-values)
@@ -37,12 +37,14 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 
 ## Prerequisites
 
-- Xcode 16.0+ (Supporting iOS 18.0)
+This project depends on several tools and environments. Please ensure the following are installed beforehand:
+
+- Xcode 16.0+ (with support for iOS 18.0)
 - [Cursor IDE](https://cursor.so)
 - [Sweetpad extension for Cursor](https://sweetpad.hyzyla.dev)
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`)
 - [SwiftLint](https://github.com/realm/SwiftLint) (`brew install swiftlint`)
-- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest)
+- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest) - setup steps included below
 
 ---
 
