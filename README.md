@@ -141,8 +141,8 @@ brew install chimehq/tap/xcode-build-server
 ### 7. **Build and Run**
 
 You have two options:
-	•	Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
-	•	Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
+- Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
+- Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
 
 ### Basic Setup (Quick Start - Do Not Recommend)
 
