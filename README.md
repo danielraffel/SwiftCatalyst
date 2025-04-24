@@ -262,31 +262,31 @@ This repository contains a template project with all files at the root level:
 
 ```
 .
-├── .cursor/                          # Cursor IDE specific settings
-│   └── rules/                        # Project coding rules
-│       ├── swift-cursor-rules.mdc    # Guidelines for project-wide rule authoring
-│       └── swiftrules.mdc            # General Swift project conventions
-├── .swiftlint.yml                    # SwiftLint configuration
-├── .env.example                      # Environment variables template
-├── Sources/                          # Application source code
-│   ├── App.swift                     # SwiftUI App entry point
-│   ├── Configuration/                # Environment configuration
-│   │   └── Configuration.swift       # Centralized environment variable handler
-│   ├── Info.plist                    # App info property list
-│   └── Modules/                      # VIPER modules
-│       └── Home/                     # Home module
-│           ├── View/                 # SwiftUI views
-│           ├── Interactor/           # Business logic
-│           ├── Presenter/            # Presentation logic
-│           ├── Entity/               # Data models (HomeEntity.swift)
-│           └── Router/               # Navigation logic
-├── Tests/                            # Test source code
-│   ├── Info.plist                    # Test info property list
-│   └── SwiftUIViperAppTests.swift    # Unit tests for Interactor and Presenter logic using XCTest
-├── .gitignore                        # Git ignore file
-├── generate-project.sh               # Script for generating project file
-├── project.yml.template              # XcodeGen configuration template
-└── README.md                         # Project documentation
+├── .cursor/                              # Cursor IDE specific settings
+│   └── rules/                            # Project coding rules
+│       ├── cursor-rules-creation.mdc     # Guidelines for project-wide rule authoring
+│       └── swift-viper-architecture.mdc  # General Swift project conventions
+├── .swiftlint.yml                        # SwiftLint configuration
+├── .env.example                          # Environment variables template
+├── Sources/                              # Application source code
+│   ├── App.swift                         # SwiftUI App entry point
+│   ├── Configuration/                    # Environment configuration
+│   │   └── Configuration.swift           # Centralized environment variable handler
+│   ├── Info.plist                        # App info property list
+│   └── Modules/                          # VIPER modules
+│       └── Home/                         # Home module
+│           ├── View/                     # SwiftUI views
+│           ├── Interactor/               # Business logic
+│           ├── Presenter/                # Presentation logic
+│           ├── Entity/                   # Data models (HomeEntity.swift)
+│           └── Router/                   # Navigation logic
+├── Tests/                                # Test source code
+│   ├── Info.plist                        # Test info property list
+│   └── SwiftUIViperAppTests.swift        # Unit tests for Interactor and Presenter logic using XCTest
+├── .gitignore                            # Git ignore file
+├── generate-project.sh                   # Script for generating project file
+├── project.yml.template                  # XcodeGen configuration template
+└── README.md                             # Project documentation
 ```
 
 ---
@@ -433,19 +433,19 @@ You can customize this screen by modifying the Home module or adding new VIPER m
 
 | File | Purpose |
 |------|---------|
-| `swift-cursor-rules.mdc` | A meta-rule that serves as a template/guide for creating new cursor rules specifically formatted for Swift and VIPER architecture. |
-| `swiftrules.mdc` | Contains the project's Swift coding standards and implementation patterns for our VIPER architecture with hot reloading. |
+| [cursor-rules-creation.mdc](/.cursor/rules/cursor-rules-creation.mdc) | A meta-rule that serves as a template/guide for creating new cursor rules specifically formatted for Swift and VIPER architecture. |
+| [swift-viper-architecture.mdc](/.cursor/rules/swift-viper-architecture.mdc) | Contains the project's Swift coding standards and implementation patterns for our VIPER architecture with hot reloading. |
 
-#### Using **`swiftrules.mdc`**:
+#### Using **`swift-viper-architecture.mdc`**:
 
 1. **Automatic activation**: These rules are automatically applied when editing matching Swift files.
    
 2. **Manual activation**: In a Cursor chat, you can reference this rule with:
    ```
-   @swiftrules.mdc
+   @swift-viper-architecture.mdc
    ```
 
-#### Using **`swift-cursor-rules.mdc`** (the meta-rule):
+#### Using **`cursor-rules-creation.mdc`** (the meta-rule):
 
 The meta-rule makes creating new rules simple:
 
@@ -453,7 +453,7 @@ The meta-rule makes creating new rules simple:
 2. **Open a Cursor chat**
 3. **Point the AI to your meta-rule** by saying:
    ```
-   Using the swift-cursor-rules.mdc guide...
+   Using the @cursor-rules-creation.mdc guide...
    ```
 4. **Ask it to write a new rule** based on your conversation, for example:
    ```
