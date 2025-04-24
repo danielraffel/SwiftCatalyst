@@ -15,7 +15,11 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [Customizing the Project](#customizing-the-project)
 - [Acknowledgments](#acknowledgments)
 - [FAQ](#faq)
-- [Contributing](#contributing)
+  - [Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?](#-where-can-i-find-my-team_id-app_group_id-and-other-apple-developer-values)
+  - [What does the sample app look like](#-what-it-looks-like)
+  - [What do the Cursor rule files in this project do?](#-what-do-the-cursor-rule-files-in-this-project-do)
+  - [When should I create new rules?](#-when-should-i-create-new-rules)
+  - [Recommended Project Locations for InjectionIII](#-recommended-project-locations-for-injectioniii)
 - [License](#license)
 
 ## Features
@@ -37,12 +41,16 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [SwiftLint](https://github.com/realm/SwiftLint) (optional, `brew install swiftlint`)
 - [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest) (download and install the InjectionIII.app.zip file)
 
+---
+
 ## Setup Process
 
 There are two ways to set up this project:
 
 1. **Environment Configuration (Recommended)**: Using environment variables for flexible customization
 2. **Basic Setup (Quick Start)**: Fast setup without customization
+
+---
 
 ### Environment Configuration (Recommended)
 
@@ -144,6 +152,8 @@ You have two options:
 - Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
 - Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
 
+---
+
 ### Basic Setup (Quick Start - Do Not Recommend)
 
 This approach is useful for:
@@ -199,6 +209,8 @@ let apiUrl = Configuration.apiBaseURL
 
 You don't need to manually import the Configuration file in each of your files - it's available throughout the project.
 
+---
+
 ## Hot Reloading with InjectionIII
 
 Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version 1.5.0).
@@ -239,6 +251,8 @@ struct MyView: View {
 }
 ```
 
+---
+
 ## Project Structure
 
 This repository contains a template project with all files at the root level:
@@ -271,6 +285,8 @@ This repository contains a template project with all files at the root level:
 ├── project.yml.template              # XcodeGen configuration template
 └── README.md                         # Project documentation
 ```
+
+---
 
 ## VIPER Module Structure
 
@@ -313,6 +329,8 @@ Regardless of approach, consider:
 - Renaming the root module from `Home` to something more descriptive for your application
 - Updating module names to match your application's domain
 
+---
+
 ## Custom Keyboard Shortcuts in Cursor for Sweetpad
 
 For an efficient development workflow in Cursor, configure these keyboard shortcuts to work better with Sweetpad:
@@ -327,12 +345,19 @@ For an efficient development workflow in Cursor, configure these keyboard shortc
   
 ![Cursor Sweetpad Shortcuts](https://github.com/user-attachments/assets/b1ac9c74-217e-4dae-9584-8f5128378cc4)
 
+---
+
 ## Acknowledgments
 
 - [Inject](https://github.com/krzysztofzablocki/Inject) - Hot reloading support
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) - Project generation
 - [Sweetpad](https://sweetpad.hyzyla.dev) - Cursor IDE integration
 - [InjectionIII](https://github.com/johnno1962/InjectionIII) - Runtime code injection
+- The Cursor Rules system implemented in this project was inspired by Adithyan's article "Writing Cursor Rules with a Cursor Rule"
+- [swift-cursor-rules.mdc](./cursor/rules/swift-cursor-rules.mdc) was inspired by [Adithyan](https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule) and [Geoffrey Huntley](https://ghuntley.com/stdlib/) 
+- [swiftrules.mdc](./cursor/rules/swiftrules.mdc) was inspired by [Swift Cursor Rules](https://www.rayfernando.ai/swift-cursor-rules) by Ray Fernando & Lou Zell.
+
+---
 
 ## FAQ
 
@@ -383,7 +408,9 @@ APP_GROUP_ID=group.com.yourcompany.yourawesomeapp
 TEAM_ID=ABCDEF1234
 ```
 
-## 👀 What It Looks Like
+---
+
+### 👀 What It Looks Like
 
 After completing setup and running the app, you should see a screen like this:
 
@@ -397,7 +424,53 @@ This shows:
 
 You can customize this screen by modifying the Home module or adding new VIPER modules.
 
-## ✅ Recommended Locations for InjectionIII
+---
+
+### 📄 What do the [cursor rule](https://docs.cursor.com/context/rules) files in this project do?
+
+| File | Purpose |
+|------|---------|
+| `swift-cursor-rules.mdc` | A meta-rule that serves as a template/guide for creating new cursor rules specifically formatted for Swift and VIPER architecture. |
+| `swiftrules.mdc` | Contains the project's Swift coding standards and implementation patterns for our VIPER architecture with hot reloading. |
+
+#### Using **`swiftrules.mdc`**:
+
+1. **Automatic activation**: These rules are automatically applied when editing matching Swift files.
+   
+2. **Manual activation**: In a Cursor chat, you can reference this rule with:
+   ```
+   @swiftrules.mdc
+   ```
+
+#### Using **`swift-cursor-rules.mdc`** (the meta-rule):
+
+The meta-rule makes creating new rules simple:
+
+1. **Notice a pattern** you want to codify in your codebase
+2. **Open a Cursor chat**
+3. **Point the AI to your meta-rule** by saying:
+   ```
+   Using the swift-cursor-rules.mdc guide...
+   ```
+4. **Ask it to write a new rule** based on your conversation, for example:
+   ```
+   Write a rule for our networking layer implementation based on this chat
+   ```
+5. **Copy the generated rule content** from the chat - Cursor won't save it automatically
+6. **Create a new `.mdc` file** in the `.cursor/rules/` directory and paste the content
+7. **Commit the new rule** for team sharing
+
+#### When should I create new rules?
+
+Create new rules when:
+- Establishing patterns for new features or components
+- Setting conventions for specific areas of the codebase (like networking, data models, or UI components)
+- Documenting implementation requirements that you find yourself explaining repeatedly
+- Adding new architectural patterns or third-party integrations
+
+---
+
+### ✅ Recommended Project Locations for InjectionIII
 To avoid permission issues, store your Xcode project outside of:
 
 ```
@@ -417,10 +490,8 @@ Instead, use a location like:
 ```
 You can create a folder like ~/Developer/MyApp and move your project there.
 
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
+---
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
