@@ -357,8 +357,8 @@ For an efficient development workflow in Cursor, configure these keyboard shortc
 - [Sweetpad](https://sweetpad.hyzyla.dev) - Cursor IDE integration
 - [InjectionIII](https://github.com/johnno1962/InjectionIII) - Runtime code injection
 - The Cursor Rules system implemented in this project was inspired by Adithyan's article "Writing Cursor Rules with a Cursor Rule"
-- [cursor-rules-creation.mdc](./cursor/rules/cursor-rules-creation.mdc) was inspired by [Adithyan](https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule) and [Geoffrey Huntley](https://ghuntley.com/stdlib/) 
-- [swift-viper-architecture.mdc](./cursor/rules/swift-viper-architecture.mdc) was inspired by [Swift Cursor Rules](https://www.rayfernando.ai/swift-cursor-rules) by Ray Fernando & Lou Zell.
+- [cursor-rules-creation.mdc](/.cursor/rules/cursor-rules-creation.mdc) was inspired by [Adithyan](https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule) and [Geoffrey Huntley](https://ghuntley.com/stdlib/) 
+- [swift-viper-architecture.mdc](/.cursor/rules/swift-viper-architecture.mdc) was inspired by [Swift Cursor Rules](https://www.rayfernando.ai/swift-cursor-rules) by Ray Fernando & Lou Zell.
 
 ---
 
