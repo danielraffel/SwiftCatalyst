@@ -265,6 +265,7 @@ This repository contains a template project with all files at the root level:
 ├── .cursor/                              # Cursor IDE specific settings
 │   └── rules/                            # Project coding rules
 │       ├── cursor-rules-creation.mdc     # Guidelines for project-wide rule authoring
+│       ├── git-commits.mdc               # Automating commits to git when succeeded with a requirement
 │       └── swift-viper-architecture.mdc  # General Swift project conventions
 ├── .swiftlint.yml                        # SwiftLint configuration
 ├── .env.example                          # Environment variables template
@@ -274,13 +275,13 @@ This repository contains a template project with all files at the root level:
 │   │   └── Configuration.swift           # Centralized environment variable handler
 │   ├── Info.plist                        # App info property list
 │   └── Modules/                          # VIPER modules
-│       └── Home/                         # Home module
+│       └── Home/                         # Custom module name (eg Home)
 │           ├── View/                     # SwiftUI views
 │           ├── Interactor/               # Business logic
 │           ├── Presenter/                # Presentation logic
 │           ├── Entity/                   # Data models (HomeEntity.swift)
 │           └── Router/                   # Navigation logic
-├── Tests/                                # Test source code
+├── Tests/                                # Source code tests
 │   ├── Info.plist                        # Test info property list
 │   └── SwiftUIViperAppTests.swift        # Unit tests for Interactor and Presenter logic using XCTest
 ├── .gitignore                            # Git ignore file
@@ -430,25 +431,14 @@ You can customize this screen by modifying the Home module or adding new VIPER m
 ---
 
 ### 📄 What do the [cursor rule](https://docs.cursor.com/context/rules) files in this project do?
-
 | File | Purpose |
 |------|---------|
 | [cursor-rules-creation.mdc](/.cursor/rules/cursor-rules-creation.mdc) | A meta-rule that serves as a template/guide for creating new cursor rules specifically formatted for Swift and VIPER architecture. |
+| [git-commits.mdc](/.cursor/rules/git-commits.mdc) | Automated rule for creating standardized Git commits in conventional format for Swift projects and all related assets. |
 | [swift-viper-architecture.mdc](/.cursor/rules/swift-viper-architecture.mdc) | Contains the project's Swift coding standards and implementation patterns for our VIPER architecture with hot reloading. |
 
-#### Using **`swift-viper-architecture.mdc`**:
-
-1. **Automatic activation**: These rules are automatically applied when editing matching Swift files.
-   
-2. **Manual activation**: In a Cursor chat, you can reference this rule with:
-   ```
-   @swift-viper-architecture.mdc
-   ```
-
 #### Using **`cursor-rules-creation.mdc`** (the meta-rule):
-
 The meta-rule makes creating new rules simple:
-
 1. **Notice a pattern** you want to codify in your codebase
 2. **Open a Cursor chat**
 3. **Point the AI to your meta-rule** by saying:
@@ -464,13 +454,38 @@ The meta-rule makes creating new rules simple:
 7. **Commit the new rule** for team sharing
 
 #### When should I create new rules?
-
 Create new rules when:
 - Establishing patterns for new features or components
 - Setting conventions for specific areas of the codebase (like networking, data models, or UI components)
 - Documenting implementation requirements that you find yourself explaining repeatedly
 - Adding new architectural patterns or third-party integrations
 
+---
+
+#### Using **`git-commits.mdc`**:
+The git commits rule automatically:
+1. **Detects file changes** after successful builds or edits
+2. **Analyzes the change type** based on file type and description
+3. **Determines appropriate scope** based on Swift/VIPER architecture patterns
+4. **Formats commit messages** according to conventional commits standard:
+   ```
+   feat(view): add user profile screen
+   fix(networking): resolve API authentication issue
+   refactor(presenter): extract presentation logic
+   assets(media): add onboarding video
+   ```
+5. **Groups related files** intelligently based on module structure
+
+---
+
+#### Using **`swift-viper-architecture.mdc`**:
+1. **Automatic activation**: These rules are automatically applied when editing matching Swift files.
+   
+2. **Manual activation**: In a Cursor chat, you can reference this rule with:
+   ```
+   @swift-viper-architecture.mdc
+   ```
+   
 ---
 
 ### ✅ Recommended Project Locations for InjectionIII
