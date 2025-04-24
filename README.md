@@ -382,6 +382,26 @@ This shows:
 
 You can customize this screen by modifying the Home module or adding new VIPER modules.
 
+## ✅ Recommended Locations for InjectionIII
+To avoid permission issues, store your Xcode project outside of:
+
+```
+~/Desktop
+~/Documents
+~/Downloads
+Any folder synced with iCloud Drive
+```
+
+Instead, use a location like:
+
+```
+~/Developer/
+~/Projects/
+~/Coding/
+~/Code/
+```
+You can create a folder like ~/Developer/MyApp and move your project there.
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
