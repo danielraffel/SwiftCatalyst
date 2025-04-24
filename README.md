@@ -7,7 +7,7 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
 - [Prerequisites](#prerequisites)
 - [Setup Process](#setup-process)
   - [Environment Configuration (Recommended)](#environment-configuration-recommended)
-  - [Basic Setup (Quick Start)](#basic-setup-quick-start)
+  - [Basic Setup (Quick Start - Do Not Recommend)](#basic-setup-quick-start---do-not-recommend)
 - [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
 - [Project Structure](#project-structure)
 - [VIPER Module Structure](#viper-module-structure)
@@ -314,8 +314,6 @@ Regardless of approach, consider:
 - Updating module names to match your application's domain
 
 ## Custom Keyboard Shortcuts in Cursor for Sweetpad
-
-![Cursor Keyboard Shortcuts](https://example.com/keyboard-shortcuts-screenshot.png)
 
 For an efficient development workflow in Cursor, configure these keyboard shortcuts to work better with Sweetpad:
 
