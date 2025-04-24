@@ -1,3 +1,9 @@
+---
+description: Swift VIPER Architecture Guidelines
+globs: "*.swift"
+alwaysApply: false
+---
+
 ## General Guidelines
 1. Use the latest SwiftUI APIs and features whenever possible.
 2. Implement `async/await` for asynchronous operations.
@@ -195,3 +201,6 @@ struct ExampleView: View {
 1. Generate Build Server Config using Sweetpad extension.
 2. Use Sweetpad for building and debugging.
 3. Ensure project.yml is properly configured for hot reloading.
+
+@Configuration.swift
+@ExampleVIPERModule.swift
