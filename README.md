@@ -18,7 +18,6 @@ A modern SwiftUI iOS project template using VIPER architecture with hot reloadin
   - [Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?](#-where-can-i-find-my-team_id-app_group_id-and-other-apple-developer-values)
   - [What does the sample app look like](#-what-it-looks-like)
   - [What do the Cursor rule files in this project do?](#-what-do-the-cursor-rule-files-in-this-project-do)
-  - [When should I create new rules?](#-when-should-i-create-new-rules)
   - [Recommended Project Locations for InjectionIII](#-recommended-project-locations-for-injectioniii)
 - [License](#license)
 
