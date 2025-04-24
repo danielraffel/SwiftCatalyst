@@ -387,7 +387,7 @@ TEAM_ID=ABCDEF1234
 
 After completing setup and running the app, you should see a screen like this:
 
-<img src="https://github.com/user-attachments/assets/77988819-5809-4b7d-98b5-396fd02149fc" alt="Simulator Screenshot" width="20%" />
+<img src="https://github.com/user-attachments/assets/2dec6ed0-50ab-4288-ad5f-e6ffa68e292d" alt="Simulator Screenshot" width="20%" />
 
 This shows:
 - A **Home** title from the default module
