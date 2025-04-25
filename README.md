@@ -130,6 +130,8 @@ This will:
 
 <img width="233" alt="InjectionNext Menu Bar" src="https://github.com/user-attachments/assets/3b8e865e-99da-4353-803b-573fe1291eaf" />
 
+After building [you should see this.](https://github.com/danielraffel/SwiftCatalyst/blob/main/README.md#-what-it-looks-like)
+
 ---
 
 ## Hot Reloading with InjectionNext
