@@ -34,6 +34,7 @@ targets:
           OTHER_LDFLAGS:
             - "-Xlinker"
             - "-interposable"
+            - "/Applications/InjectionNext.app/Contents/Resources/lib$(PLATFORM_NAME)Injection.dylib"
     preBuildScripts:
       - name: SwiftLint
         script: |
