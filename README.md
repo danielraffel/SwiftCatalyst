@@ -62,11 +62,13 @@ git clone https://github.com/danielraffel/SwiftCatalyst.git
 cd SwiftCatalyst
 ```
 
+---
 
 ### 2. **Open in Cursor IDE**
 
 Open the project folder in Cursor IDE.
 
+---
 
 ### 3. **Create Your `.env` File**
 
@@ -90,6 +92,7 @@ Save and exit nano:
 
 [See FAQ below](#faq) if unsure about any of the values in this step.
 
+---
 
 ### 4. **Generate Project File**
 
@@ -105,6 +108,7 @@ This will:
 - Run XcodeGen to create the Xcode project
 - Inform you of the process with detailed logs
 
+---
 
 ### 5. **Install InjectionIII for Hot Reloading**
 
@@ -119,6 +123,7 @@ This will:
 
 3. **Start InjectionIII** before running your project for hot reloading to work
 
+---
 
 ### 6. **Build and Run**
 
