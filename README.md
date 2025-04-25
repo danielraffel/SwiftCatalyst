@@ -128,7 +128,7 @@ This will:
 
 - In the InjectionNext (menu bar) app choose your target folder (eg `...or Watch Project`) , then in Cursor clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
 
-<img width="233" alt="Screenshot 2025-04-24 at 8 34 38 PM" src="https://github.com/user-attachments/assets/5d0cd7e9-0b6e-49cb-863a-eabf1786e1f8" />
+<img width="233" alt="InjectionNext Menu Bar" src="https://github.com/user-attachments/assets/3b8e865e-99da-4353-803b-573fe1291eaf" />
 
 ---
 
