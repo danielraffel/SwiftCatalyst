@@ -138,7 +138,7 @@ You’re now ready to start building! This is just a placeholder view—go ahead
 
 ## Hot Reloading with InjectionNext
 
-Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version >=1.5.0). The Cursor rules in this project should configure new views with the requirements described below.
+Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version >=1.5.0). **The Cursor rules in this project should configure new views with the requirements described below.**
 
 ### Setting Up Hot Reloading
 
