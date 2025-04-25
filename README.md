@@ -4,13 +4,13 @@ This project is a modern SwiftUI iOS template designed to make it easy to start 
 
 It follows the VIPER architecture to keep your code modular and scalable. The template includes built-in support for hot reloading in Cursor so you can see changes in the simulator as you work. It also comes with a set of custom Swift coding rules that guide style and best practices, including a meta-rule that helps you create new Cursor rules.
 
-The project is pre-configured to work with Sweetpad for state previews, XcodeGen for project generation, SwiftLint for code quality enforcement, and InjectionIII for runtime code injection. This setup aims to make it easier to stay consistent, iterate quickly, and extend your codebase with AI assistance.
+The project is pre-configured to work with Sweetpad for state previews, XcodeGen for project generation, SwiftLint for code quality enforcement, and InjectionNext for runtime code injection. This setup aims to make it easier to stay consistent, iterate quickly, and extend your codebase with AI assistance.
 
 ## Table of Contents
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup Process](#setup-process)
-  - [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
+  - [Hot Reloading with InjectionNext](#hot-reloading-with-injectionnext)
 - [Project Structure](#project-structure)
   - [VIPER Module Structure](#viper-module-structure)
   - [Creating a New VIPER Module](#creating-a-new-viper-module)
@@ -20,7 +20,7 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
   - [Where can I find my `TEAM_ID`, `APP_GROUP_ID`, and other Apple Developer values?](#-where-can-i-find-my-team_id-app_group_id-and-other-apple-developer-values)
   - [What does the sample app look like](#-what-it-looks-like)
   - [What do the Cursor rule files in this project do?](#-what-do-the-cursor-rule-files-in-this-project-do)
-  - [Recommended Project Locations for InjectionIII](#-recommended-project-locations-for-injectioniii)
+  - [Recommended Project Locations for InjectionNext](#-recommended-project-locations-for-injectionnext)
 - [License](#license)
 
 ## Features
@@ -42,7 +42,7 @@ This project depends on several tools and environments. **Please ensure the foll
 - [Sweetpad extension for Cursor](https://sweetpad.hyzyla.dev)
 - [XcodeGen](https://github.com/yonaskolb/XcodeGen) (`brew install xcodegen`)
 - [SwiftLint](https://github.com/realm/SwiftLint) (`brew install swiftlint`)
-- [InjectionIII](https://github.com/johnno1962/InjectionIII/releases/latest) - setup steps included below
+- [InjectionNext](https://github.com/johnno1962/InjectionNext/releases/latest) - setup steps included below
 
 ---
 
@@ -110,33 +110,35 @@ This will:
 
 ---
 
-### 5. **Install InjectionIII for Hot Reloading**
+### 5. **Install InjectionNext for Hot Reloading**
 
-- **Download InjectionIII**:
-   - Get the latest version from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest)
-   - Download the `InjectionIII.app.zip` file
+- **Download InjectionNext**:
+   - Get the latest version from [GitHub Releases](https://github.com/johnno1962/InjectionNext/releases/latest)
+   - Download the `InjectionNext.zip` file
 
 - **Install the App**:
    - Unzip the downloaded file
-   - Move `InjectionIII.app` to your Applications folder
+   - Move `InjectionNext.app` to your Applications folder
    - Open the app (right-click and select "Open" if you encounter security warnings)
-- **Start InjectionIII** before running your project for hot reloading to work
+- **Start InjectionNext** before running your project for hot reloading to work
 
 ---
 
 ### 6. **Build and Run**
 
-- In the InjectionIII (menu bar) app choose your target folder, then in Cursor clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
+- In the InjectionNext (menu bar) app choose your target folder (eg `...or Watch Project`) , then in Cursor clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
+
+<img width="233" alt="Screenshot 2025-04-24 at 8 34 38 PM" src="https://github.com/user-attachments/assets/5d0cd7e9-0b6e-49cb-863a-eabf1786e1f8" />
 
 ---
 
-## Hot Reloading with InjectionIII
+## Hot Reloading with InjectionNext
 
 Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version >=1.5.0). The Cursor rules in this project should configure new views with the requirements described below.
 
 ### Setting Up Hot Reloading
 
-- Start InjectionIII before running your project
+- Start InjectionNext before running your project
 
 ### Using Hot Reloading
 
@@ -270,7 +272,7 @@ For an efficient development workflow in Cursor, configure these keyboard shortc
 - [Sweetpad](https://sweetpad.hyzyla.dev) - Cursor IDE integration
 - [SwiftLint](https://github.com/realm/SwiftLint) - A tool to enforce Swift style and conventions
 - [Inject](https://github.com/krzysztofzablocki/Inject) - Hot reloading support
-- [InjectionIII](https://github.com/johnno1962/InjectionIII) - Runtime code injection
+- [InjectionNext](https://github.com/johnno1962/InjectionNext) - Runtime code injection
 - The Cursor Rules system implemented in this project:
   - [cursor-rules-creation.mdc](/.cursor/rules/cursor-rules-creation.mdc) was inspired by [Adithyan](https://www.adithyan.io/blog/writing-cursor-rules-with-a-cursor-rule) and [Geoffrey Huntley](https://ghuntley.com/stdlib/)
   - [git-commits.mdc](/.cursor/rules/git-commits.mdc) was inspired by [Geoffrey Huntley](https://ghuntley.com/stdlib/)
@@ -417,7 +419,7 @@ You don't need to manually import the Configuration file in each of your files -
 
 ---
 
-### ✅ Recommended Project Locations for InjectionIII
+### ✅ Recommended Project Locations for InjectionNext
 To avoid permission issues, store your Xcode project outside of:
 
 ```
