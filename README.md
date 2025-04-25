@@ -62,9 +62,11 @@ git clone https://github.com/danielraffel/SwiftCatalyst.git
 cd SwiftCatalyst
 ```
 
+
 ### 2. **Open in Cursor IDE**
 
 Open the project folder in Cursor IDE.
+
 
 ### 3. **Create Your `.env` File**
 
@@ -88,6 +90,7 @@ Save and exit nano:
 
 [See FAQ below](#faq) if unsure about any of the values in this step.
 
+
 ### 4. **Generate Project File**
 
 Run the included script to generate your project.yml from the template:
@@ -102,10 +105,11 @@ This will:
 - Run XcodeGen to create the Xcode project
 - Inform you of the process with detailed logs
 
-### 5. **Optional: Configure Build Server (Only for Sweetpad Builds)**
+
+### 5. **Optional:** Configure Build Server
 
 > **👋 New to this? Here's the quick takeaway:**  
-> If you're happy coding in **Cursor** and building/running your app in **Xcode**, you can **skip this step**.  
+> You can **skip this step** if like me you're happy coding in **Cursor** and building/running your app in **Xcode** in the background.
 >  
 > But if you'd rather stay entirely inside Cursor — *code, build, and run all in one place* — then keep reading.
 
@@ -117,7 +121,7 @@ To build and run your app **directly within the Cursor IDE using Sweetpad**, you
 
 #### 🧰 You'll Also Need: `xcode-build-server`
 
-If you go this route, you'll need [`xcode-build-server`](https://github.com/ChimeHQ/xcode-build-server), a tool that connects Cursor's Sweetpad with Xcode's build system using the Build Server Protocol.
+If you go this route, you'll need [`xcode-build-server`](https://github.com/SolaWing/xcode-build-server), a tool that connects Cursor's Sweetpad with Xcode's build system using the Build Server Protocol.
 
 To install it:
 
@@ -133,6 +137,7 @@ brew install chimehq/tap/xcode-build-server
 
 > **Again, this step is 100% optional.**  
 > You can always build using Xcode and just use Cursor for editing if that's more comfortable.
+
 
 ### 6. **Install InjectionIII for Hot Reloading**
 
