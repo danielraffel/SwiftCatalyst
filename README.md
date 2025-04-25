@@ -290,7 +290,7 @@ Here's where to find each of them in your [Apple Developer account](https://deve
 
 #### `APP_NAME`
 
-This is your app's display name—**define it yourself** in:
+This is your app's display name—**define it yourself in the ENV** traditionally you would do that in:
 - **Xcode**: Target settings > General > Display Name
 - **App Store Connect**: "My Apps" > Select app
 
