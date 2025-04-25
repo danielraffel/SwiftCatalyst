@@ -35,7 +35,7 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 
 ## Prerequisites
 
-This project depends on several tools and environments. Please ensure the following are installed beforehand:
+This project depends on several tools and environments. **Please ensure the following are installed beforehand**:
 
 - Xcode 16.0+ (with support for iOS 18.0)
 - [Cursor IDE](https://cursor.so)
