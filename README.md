@@ -11,7 +11,6 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 - [Prerequisites](#prerequisites)
 - [Setup Process](#setup-process)
   - [Environment Configuration (Recommended)](#environment-configuration-recommended)
-  - [Basic Setup (Quick Start - Do Not Recommend)](#basic-setup-quick-start---do-not-recommend)
   - [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
 - [Project Structure](#project-structure)
   - [VIPER Module Structure](#viper-module-structure)
@@ -156,63 +155,6 @@ brew install chimehq/tap/xcode-build-server
 You have two options:
 - Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
 - Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
-
----
-
-### Basic Setup (Quick Start - Do Not Recommend)
-
-This approach is useful for:
-- Quick evaluation of the template
-- Running demo projects
-- Prototyping without worrying about configuration details
-
-Be aware that this approach uses default values for project name, bundle IDs, etc., and doesn't fully utilize the configuration system.
-
-#### 1. **Clone the Repository**
-
-```bash
-git clone https://github.com/danielraffel/SwiftCatalyst.git
-cd SwiftCatalyst
-```
-
-#### 2. **Open in Cursor IDE**
-
-Open the project folder in Cursor IDE.
-
-#### 3. **Create Project File and Generate Xcode Project**
-
-Since this template uses a template-based project configuration, you need to create a project.yml file first:
-
-```bash
-cp project.yml.template project.yml
-xcodegen
-```
-
-This will:
-- Create a basic project.yml file with default values
-- Generate an Xcode project with the name "SwiftUIViperApp"
-
-> **Note:** This approach uses default values and doesn't fully utilize the environment configuration system. For a more customized setup, use the Environment Configuration approach.
-
-#### 4. **Install InjectionIII**
-
-Download and install InjectionIII as described in step 6 of the Environment Configuration section above.
-
-#### 5. **Build and Run**
-
-Open the generated .xcodeproj file in Xcode and run.
-
-## Using Configuration in Code
-
-The Configuration.swift file is included in the template and provides access to all environment variables:
-
-```swift
-// Example usage
-let appName = Configuration.appName
-let apiUrl = Configuration.apiBaseURL
-```
-
-You don't need to manually import the Configuration file in each of your files - it's available throughout the project.
 
 ---
 
@@ -490,6 +432,20 @@ The git commits rule automatically:
    @swift-viper-architecture.mdc
    ```
    
+---
+
+#### Using Configuration in Code
+
+The Configuration.swift file is included in the template and provides access to all environment variables:
+
+```swift
+// Example usage
+let appName = Configuration.appName
+let apiUrl = Configuration.apiBaseURL
+```
+
+You don't need to manually import the Configuration file in each of your files - it's available throughout the project.
+
 ---
 
 ### ✅ Recommended Project Locations for InjectionIII
