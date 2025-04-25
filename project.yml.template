@@ -30,6 +30,7 @@ targets:
         DEVELOPMENT_TEAM: ${TEAM_ID}
       configs:
         debug:
+          EMIT_FRONTEND_COMMAND_LINES: YES
           OTHER_LDFLAGS:
             - "-Xlinker"
             - "-interposable"
