@@ -66,10 +66,14 @@ cd SwiftCatalyst
 
 Open the project folder in Cursor IDE.
 
-### 3. **Create Environment File**
+### 3. **Create Your `.env` File**
 
-Create a `.env` file based on the provided `.env.example` template:
+```bash
+cp .env.example .env
+nano .env
+```
 
+Edit the config:
 ```
 # App Configuration
 APP_NAME=YourAwesomeApp
@@ -77,6 +81,10 @@ BUNDLE_ID_PREFIX=com.yourcompany
 APP_GROUP_ID=group.com.yourcompany.yourawesomeapp
 TEAM_ID=ABCDEF1234
 ```
+
+Save and exit nano:
+-	Ctrl + O, then Enter to save
+-	Ctrl + X to exit
 
 [See FAQ below](#faq) if unsure about any of the values in this step.
 
