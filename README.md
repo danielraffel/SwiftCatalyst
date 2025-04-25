@@ -112,36 +112,31 @@ This will:
 
 ### 5. **Install InjectionIII for Hot Reloading**
 
-1. **Download InjectionIII**:
+- **Download InjectionIII**:
    - Get the latest version from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest)
    - Download the `InjectionIII.app.zip` file
 
-2. **Install the App**:
+- **Install the App**:
    - Unzip the downloaded file
    - Move `InjectionIII.app` to your Applications folder
    - Open the app (right-click and select "Open" if you encounter security warnings)
-
-3. **Start InjectionIII** before running your project for hot reloading to work
+- **Start InjectionIII** before running your project for hot reloading to work
 
 ---
 
 ### 6. **Build and Run**
 
-You have two options:
-- Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
-- Alternatively, in Xcode: Open the generated .xcodeproj file and run the project directly from there.
+- In the InjectionIII (menu bar) app choose your target folder, then in Cursor clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
 
 ---
 
 ## Hot Reloading with InjectionIII
 
-Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version 1.5.0).
+Hot reloading is already configured in this template using the [Inject](https://github.com/krzysztofzablocki/Inject) framework (version >=1.5.0). The Cursor rules in this project should configure new views with the requirements described below.
 
 ### Setting Up Hot Reloading
 
-1. Install InjectionIII from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest) (download InjectionIII.app.zip)
-2. Move InjectionIII.app to your Applications folder
-3. Start InjectionIII before running your project
+- Start InjectionIII before running your project
 
 ### Using Hot Reloading
 
