@@ -106,40 +106,7 @@ This will:
 - Inform you of the process with detailed logs
 
 
-### 5. **Optional:** Configure Build Server
-
-> **👋 New to this? Here's the quick takeaway:**  
-> You can **skip this step** if like me you're happy coding in **Cursor** and building/running your app in **Xcode** in the background.
->  
-> But if you'd rather stay entirely inside Cursor — *code, build, and run all in one place* — then keep reading.
-
-To build and run your app **directly within the Cursor IDE using Sweetpad**, you'll need to set up a build server configuration:
-
-1. Press `Cmd+Shift+P` to open the command palette  
-2. Type **"Sweetpad: Generate Build Server Config"** and select it  
-3. This will create a `buildServer.json` file in your project root
-
-#### 🧰 You'll Also Need: `xcode-build-server`
-
-If you go this route, you'll need [`xcode-build-server`](https://github.com/SolaWing/xcode-build-server), a tool that connects Cursor's Sweetpad with Xcode's build system using the Build Server Protocol.
-
-To install it:
-
-```bash
-brew install chimehq/tap/xcode-build-server
-```
-
-#### 💡 Why do this?
-
-- Lets you **build and run your app inside Cursor** without opening Xcode
-- Supports a smoother, keyboard-driven, IDE-native workflow
-- Ideal if you want a *lightweight, all-in-one dev environment*
-
-> **Again, this step is 100% optional.**  
-> You can always build using Xcode and just use Cursor for editing if that's more comfortable.
-
-
-### 6. **Install InjectionIII for Hot Reloading**
+### 5. **Install InjectionIII for Hot Reloading**
 
 1. **Download InjectionIII**:
    - Get the latest version from [GitHub Releases](https://github.com/johnno1962/InjectionIII/releases/latest)
@@ -152,7 +119,8 @@ brew install chimehq/tap/xcode-build-server
 
 3. **Start InjectionIII** before running your project for hot reloading to work
 
-### 7. **Build and Run**
+
+### 6. **Build and Run**
 
 You have two options:
 - Within Cursor (Recommended): Use the Sweetpad app to choose your target folder, then clean and build to launch the simulator (e.g., `Cmd+Shift+K` to clean and `Cmd+Shift+B` to build).
@@ -176,8 +144,7 @@ To apply changes while the app is running in the simulator:
 
 1. Make changes to any SwiftUI view
 2. Save the file
-3. Press **Control + =** to trigger the hot reload
-4. The changes will be immediately reflected in the simulator
+3. The changes will be immediately reflected in the simulator
 
 Each SwiftUI view should:
 - Import the Inject framework
