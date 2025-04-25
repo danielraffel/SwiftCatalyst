@@ -10,7 +10,6 @@ The project is pre-configured to work with Sweetpad for state previews, XcodeGen
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup Process](#setup-process)
-  - [Environment Configuration (Recommended)](#environment-configuration-recommended)
   - [Hot Reloading with InjectionIII](#hot-reloading-with-injectioniii)
 - [Project Structure](#project-structure)
   - [VIPER Module Structure](#viper-module-structure)
@@ -49,20 +48,10 @@ This project depends on several tools and environments. Please ensure the follow
 
 ## Setup Process
 
-There are two ways to set up this project:
-
-1. **Environment Configuration (Recommended)**: Using environment variables for flexible customization
-2. **Basic Setup (Quick Start)**: Fast setup without customization
-
----
-
-### Environment Configuration (Recommended)
-
-This is the recommended approach for:
-- Creating a real project you plan to use in production
-- Customizing project name, bundle IDs, and team ID
-- Setting up multiple environments (development, staging, production)
-- Team projects with multiple developers
+This will:
+- Create a real project suitable for production use
+- Customize project name, bundle IDs, and team ID
+- Set up multiple environments (development, staging, production)
 
 Setup steps:
 
